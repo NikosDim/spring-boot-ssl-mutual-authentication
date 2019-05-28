@@ -12,9 +12,9 @@ public class SecureClientApplication {
 
     @PostConstruct
     public void initSsl() {
-        System.setProperty("javax.net.ssl.keyStore", Thread.currentThread().getContextClassLoader().getResource("client-keystore.jks").getPath());
+        System.setProperty("javax.net.ssl.keyStore", Thread.currentThread().getContextClassLoader().getResource("client-keystore.p12").getPath());
         System.setProperty("javax.net.ssl.keyStorePassword", "secret");
-        System.setProperty("javax.net.ssl.trustStore", Thread.currentThread().getContextClassLoader().getResource("client-truststore.jks").getPath());
+        System.setProperty("javax.net.ssl.trustStore", Thread.currentThread().getContextClassLoader().getResource("client-truststore.p12").getPath());
         System.setProperty("javax.net.ssl.trustStorePassword", "secret");
 		/*
 		javax.net.ssl.HttpsURLConnection.setDefaultHostnameVerifier(

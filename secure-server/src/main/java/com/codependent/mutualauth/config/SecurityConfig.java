@@ -25,7 +25,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     public UserDetailsService userDetailsService() {
         return (username -> {
-            if (username.equals("codependent-client")) {
+            if (username.equals("TheClient")) {
                 return new User(username, "", AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_USER"));
             } else {
                 return null;
