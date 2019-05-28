@@ -1,7 +1,7 @@
 spring:
   application:
     name: secure-server
-    
+
 server:
   port: 8443
   ssl:
@@ -12,7 +12,7 @@ server:
     trust-store-password: secret
     enabled: true
     client-auth: need
-    
+
 logging:
   level:
     org.springframework.security: DEBUG
