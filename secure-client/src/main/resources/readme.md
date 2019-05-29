@@ -1,10 +1,10 @@
 # Generate PKCS12 keystore, certificate and truststore for client and server for mutual authentication
 
 1. **Generating the Server Keystore:**
-  `keytool -genkeypair -alias secure-server -keyalg RSA -dname "CN=localhost,OU=interlink,O=interlink,L=Manchester,S=UK,C=uk" -keypass secret -keystore server-keystore.p12 -storepass secret -storetype PKCS12`
+  `keytool -genkeypair -alias secure-server -keyalg RSA -dname "CN=localhost,OU=interlink,O=interlink,L=Manchester,S=UK,C=uk" -keypass secret -keystore server-keystore.p12 -storepass secret -storetype PKCS12 -ext SAN=dns:localhost,ip:127.0.0.1`
 
 2. **Generating the Client Keystore:** 
-  `keytool -genkeypair -alias secure-client -keyalg RSA -dname "CN=TheClient,OU=interlink,O=interlink,L=Manchester,S=UK,C=uk" -keypass secret -keystore client-keystore.p12 -storepass secret -storetype PKCS12`
+  `keytool -genkeypair -alias secure-client -keyalg RSA -dname "CN=TheClient,OU=interlink,O=interlink,L=Manchester,S=UK,C=uk" -keypass secret -keystore client-keystore.p12 -storepass secret -storetype PKCS12 -ext SAN=dns:localhost,ip:127.0.0.1`
 
 3. **Import the supported client's public certificates intro the server truststore:**
     - **Export the client public certificate:** 

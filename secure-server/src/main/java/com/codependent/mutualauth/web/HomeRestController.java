@@ -13,4 +13,8 @@ public class HomeRestController {
         return String.format("Hello %s!", principal.getName());
     }
 
+    @GetMapping("/hello")
+    public String home2() {
+        return String.format("Hello World!");
+    }
 }

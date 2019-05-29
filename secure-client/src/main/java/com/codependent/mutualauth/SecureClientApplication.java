@@ -16,14 +16,6 @@ public class SecureClientApplication {
         System.setProperty("javax.net.ssl.keyStorePassword", "secret");
         System.setProperty("javax.net.ssl.trustStore", Thread.currentThread().getContextClassLoader().getResource("client-truststore.p12").getPath());
         System.setProperty("javax.net.ssl.trustStorePassword", "secret");
-		/*
-		javax.net.ssl.HttpsURLConnection.setDefaultHostnameVerifier(
-			(hostname,sslSession) -> {
-				if (hostname.equals("localhost")) {
-					return true;
-				}
-				return false;
-			});*/
     }
 
     @Bean

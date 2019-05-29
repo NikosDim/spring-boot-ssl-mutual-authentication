@@ -20,4 +20,8 @@ public class HomeRestController {
         return restTemplate.getForObject(new URI("https://localhost:8443"), String.class);
     }
 
+    @GetMapping("/hello")
+    public String home2() throws RestClientException, URISyntaxException {
+        return restTemplate.getForObject(new URI("https://localhost:8443/hello"), String.class);
+    }
 }

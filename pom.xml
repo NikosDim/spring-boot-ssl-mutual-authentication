@@ -17,7 +17,6 @@
     <modules>
         <module>secure-server</module>
         <module>secure-client</module>
-        <module>secure-client2</module>
     </modules>
 
     <packaging>pom</packaging>
